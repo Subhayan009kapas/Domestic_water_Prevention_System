@@ -1,0 +1,65 @@
+.sidenav{
+          position: fixed;
+          top:0;
+          left: 10px;
+          margin-top: 2.5vh;
+          min-height:95vh;
+          width:20vw;
+          background: linear-gradient(145deg,  #a082f3,#9444cd, #7644cd , #9644cd ,#a08adc);
+          background: linear-gradient(145deg,  #4ec0f5,#6313ef,rgb(81, 12, 229) , rgb(81, 12, 229), rgb(47, 174, 237));
+          /* background: linear-gradient(145deg,  rgb(254, 197, 137),  rgb(239, 61, 123),rgb(236, 43, 168)); */
+          border-radius: 1rem;
+          position: fixed;
+          box-shadow:5px 5px 10px rgb(0, 0, 0),-5px -5px 10px rgb(0, 0, 0) ,inset -5px -5px 10px rgb(48, 14, 66),inset 5px 5px 10px rgb(48, 14, 66) ;
+      }
+      .accordion {
+          width: 60%;
+          cursor: pointer;
+          padding: 10px;
+          font-weight: bold;
+          margin-top: 2vh;
+          margin-left:2vw;
+          border-radius: .7rem;
+          transition: .3s all;
+          &:hover{
+          transform: translateX(10px);
+          background-color: rgb(45, 30, 56);
+          /* background: linear-gradient(145deg ,rgb(61, 30, 81)  ,  rgb(103, 44, 142), rgb(103, 44, 142), rgb(129, 64, 172)); */
+          
+        };
+        
+          /* background-color: red;  */
+        }
+      
+      
+      .side-nav-sub-list{
+          width: 8rem;
+          font-size: 1rem;
+          color: white;
+          margin-left: 2rem ;
+          align-content: center;
+          transition: .3s all;
+          padding: .2rem  ;
+          border-radius: .5rem;
+          &:hover{
+              background-color: #412474;
+              
+              transform: scale(1.05) translateX(10px) ;
+          
+      }
+      }
+      .label{
+          font-size: 1rem;
+          width: 100%;
+          font-weight: 700;
+          display: flex;
+      
+      }
+      
+      
+        .panel {
+          padding: 10px;
+          border-top: none;
+          margin: 0 2rem;
+         
+        }

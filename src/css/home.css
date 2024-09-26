@@ -1,0 +1,318 @@
+* {
+          margin: 0;
+          padding: 0;
+        
+          font-family: arial;
+          color: aliceblue;
+          scroll-behavior: smooth;
+        }
+        
+        .nav li {
+          display: table-cell;
+          padding: 2.2rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.3s ease-in;
+        
+          
+        }
+        .nav li:hover {
+          transform: scale(1.1);
+        }
+        .header {
+          width: 100vw;
+          height: 10vh;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        
+          /* background: linear-gradient(135deg, rgba(54,48,156,1) 13%, rgba(0,189,255,1) 63%, rgba(4,154,221,1) 100%, rgba(236,10,18,1) 100%); */
+          background-color: rgba(0, 0, 0, 0.5);
+        
+          color: aliceblue;
+          position: fixed;
+        }
+        .logo-icon{
+          font-size: 3.5rem;
+          color: aqua;
+          
+        }
+        
+        .login button{
+         /* background:linear-gradient(to  right  , rgb(81, 12, 229) , rgb(47, 174, 237));
+         background-color: red; */
+         background: linear-gradient(135deg, #510ce5 , #2faeed);
+          height: 50px;
+          width: 150px;
+          color: black;
+          border: none;
+          border-radius: 1.75rem;
+          cursor: pointer;
+          outline: none;
+          font-size: 1rem;
+          font-weight: 600;
+          
+        }
+        
+        .hero {
+          width: 100vw;
+          height: 100vh;
+          background-image: url("https://i.ibb.co/x149dBS/new-back.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .hero-text {
+          position: relative;
+          top: 200px;
+          left: 100px;
+          font-size: 2rem;
+        }
+        .hero-text h1{
+         color: aqua;
+        }
+        #second-line {
+          position: relative;
+          left: 150px;
+        }
+        .overlay {
+          width: 100vw;
+          height: 100vh;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+        .heading-text{
+          background: linear-gradient(to right, #510ce5, #2faeed);
+         -webkit-background-clip: text; /* For WebKit-based browsers */
+         background-clip: text; /* Standard syntax */
+         color: transparent;
+        display: inline-block;
+         
+        }
+        .heading{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .about {
+          margin-top: 5rem;
+        }
+        .about-content {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 5rem;
+          padding: 0 50px;
+        }
+        .about-content .text {
+          height: 200px;
+          width: 650px;
+          font-size: 1.1rem;
+          line-height: 2.5rem;
+          margin-top: 20px;
+          letter-spacing: 1px;
+        }
+        .about-content .img {
+          height: 200px;
+          width: 620px;
+        }
+        .about-content .img img {
+          height: 420px;
+          width: 600px;
+          border-radius: 1.75rem;
+        }
+        .vision {
+          margin-top: 400px;
+        }
+        .vision-content {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 5rem;
+          padding: 0 50px;
+        }
+        .vision-content .text {
+          height: 200px;
+          width: 620px;
+          font-size: 1.1rem;
+          line-height: 2.5rem;
+          margin-top: 20px;
+          letter-spacing: 1px;
+        }
+        .vision-content .img {
+          height: 200px;
+          width: 620px;
+        }
+        .vision-content .img img {
+          height: 400px;
+          width: 650px;
+          border-radius: 1.75rem;
+        }
+        .blogs {
+          margin-top: 400px;
+        }
+        .blogs-content {
+          
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          
+          margin-top: 5rem;
+          padding: 0 100px;
+        }
+        .blogs-content .card {
+          height: 450px;
+          width: 280px;
+           border: 0.3px solid rgb(193, 175, 175); 
+          padding: 5px;
+          border-radius: 10px;
+          /*  */
+          transition: all 1s ease;
+          cursor: pointer;
+          background-color: rgb(21, 20, 20);
+          
+        }
+        .blogs-content .card:hover{
+          transform: scale(1.04);
+          box-shadow: 0px 0px 20px white  ;
+        }
+        
+        .blogs-content .card .img1 {
+          background-image: url("https://images.moneycontrol.com/static-mcnews/2024/02/Water-Shortage-Bengaluru-770x433.jpg?impolicy=website&width=770&height=431");
+          height: 200px;
+          width: 280px;
+          background-size: cover;
+          border-radius: 10px;
+        }
+        
+        .blogs-content .card .img2 {
+          background-image: url("https://indtoday.com/wp-content/uploads/2024/04/Hyderabad-Water-Crisis-1024x576.jpg");
+          height: 200px;
+          width: 280px;
+          background-size: cover;
+          border-radius: 10px;
+        }
+        .blogs-content .card .img3 {
+          background-image: url("https://www.livelaw.in/h-upload/2024/05/31/750x450_542391-severe-water-crisis-sc.webp");
+          height: 200px;
+          width: 280px;
+          background-size: cover;
+          border-radius: 10px;
+        }
+        .blogs-content .card .img4 {
+          background-image: url("https://media.assettype.com/saamtv%2F2024-04%2F17661712-b7df-493d-a324-17b5b09668e5%2F____________________________________2024_04_23T085727_467.jpg");
+          height: 200px;
+          width: 280px;
+          background-size: cover;
+          border-radius: 10px;
+        }
+        .blogs-content .card h3{
+          padding: 2px;
+        }
+        .blogs-content .card p{
+          padding: 5px;
+          line-height: 20px;
+          font-size: 15px;
+        }
+        
+        .contact{
+          margin-top: 200px;
+        }
+        .tap{
+         font-size: 35px;
+        }
+        .contact-content{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 5rem;
+          padding: 0 100px;
+        }
+        .contact-content  .address-details{
+          height: 400px;
+          width: 650px;
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+          
+          letter-spacing: 1px;
+          
+         
+        }
+        
+        .contact-content  .address-details img{
+          height: 400px;
+          width: 650px;
+          border-radius: 1.75rem;
+        }
+        .form{
+          position: relative;
+          left: 5vw;
+          height: 400px;
+          width: 650px;
+          top: 10px;
+        }
+        
+        .form form input{
+          height: 6vh;
+          width: 32vw;
+          margin: 10px;
+          padding: 5px;
+          font-size: 1rem;
+          color: black;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px white;
+        
+        }
+        .form  form  textarea{
+          height: 15vh;
+          width: 32vw;
+          margin: 10px;
+          padding: 6px;
+          border: 1px solid black;
+          font-size: 1rem;
+          color: black;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px white;
+        }
+        .form  form  button{
+          height: 50px;
+          width: 150px;
+          color: aqua;
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin: 10px;
+          padding: 5px;
+          border-radius: 10px;
+          background: linear-gradient(to right, #510ce5, #61c8fb);
+         -webkit-background-clip: text; /* For WebKit-based browsers */
+         background-clip: text; /* Standard syntax */
+         color: transparent;
+        display: inline-block;
+          box-shadow: 2px 2px 10px white;
+          cursor: pointer;
+          margin-left: 1rem;
+          
+        }
+        .copy-right{
+          height: 60px;
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .email img{
+          width: 40px;
+        }
+        .address-icon1{
+          position: absolute;
+          font-size: 40px;
+          
+        
+        }
+        .address-icon2{
+          position: absolute;
+          font-size: 40px;
+          
+        }
