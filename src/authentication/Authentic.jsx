@@ -41,7 +41,7 @@ const Authentic = () => {
       const provider = new GoogleAuthProvider();
       try {
          await signInWithPopup(auth, provider);
-         window.location.href = isUserLogin ? "/user" : "/authority"; // Redirect based on role
+         window.location.href = isUserLogin ? "/user/waterflow" : "/authority/setlimit"; // Redirect based on role
       } catch (error) {
          setError(`Google Login Error: ${error.message}`);
       }
@@ -49,7 +49,7 @@ const Authentic = () => {
 
    return (
       <div className="auth-container">
-         <div className="auth-header">
+         <div className="auth2-header">
             <button 
                className={`role-button ${isUserLogin ? 'active' : ''}`} 
                onClick={handleToggleRole}

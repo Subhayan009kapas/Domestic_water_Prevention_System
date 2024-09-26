@@ -9,14 +9,17 @@
 }
 
 /* Header Styling */
- .header {
+ .user-header {
      display: flex;
-   justify-content: space-evenly;
+     width: 80%;
+   justify-content:end;
    align-items: center;
   gap: 5rem;
  
    color: white;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   position: relative;
+   top: 10vh;
 } 
 
 .title {
@@ -51,8 +54,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 100px;
-  right: 20px;
+  top: 180px;
+  right: 10px;
   width: 250px;
   text-align: left;
   box-shadow: 0px 0px 15px;

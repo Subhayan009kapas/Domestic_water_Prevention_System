@@ -35,10 +35,10 @@ function Authority() {
 
   return (
     <>
-     <header className="header">
-        <h1 className="title" ><FontAwesomeIcon icon={faUserSecret} /> Authority </h1>
+     <header className="auth-header">
+       
         <div className="authority-profile" onClick={toggleDetails}>
-        <span>{authority?.displayName}</span>
+        <span>{authority?.email}</span>
           {authority && <img src={authority.photoURL} alt="Authority Profile" className="profile-img" />}
          
         </div>

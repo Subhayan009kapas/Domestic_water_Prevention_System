@@ -6,14 +6,18 @@ Authority Container
  }
  
  /* Header Styling */
- .header {
+ .auth-header {
+  width: 80%;
+  justify-content: end;
    display: flex;
-   justify-content: space-evenly;
+ 
+
    align-items: center;
   
  
    color: white;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   position: fixed;
  }
  
  .title {
@@ -27,6 +31,9 @@ Authority Container
    cursor: pointer;
    position: relative;
    left: 200px;
+   
+   padding: 10px;
+   border-radius: 1.75rem;
  }
  
  .authority-profile img {
@@ -47,9 +54,9 @@ Authority Container
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 100px;
+  top: 180px;
   right: 20px;
-  width: 250px;
+  width: 14vw;
   text-align: left;
   box-shadow: 0px 0px 15px;
  }

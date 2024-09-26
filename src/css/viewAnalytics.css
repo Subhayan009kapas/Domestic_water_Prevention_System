@@ -1,0 +1,91 @@
+/* src/allCss/viewAnalytics.css */
+
+.view-analytics-container {
+          background-color: #000; /* Dark background color */
+          color: #fff; /* Light text color for contrast */
+        /* background-color: red; */
+        z-index:-10;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          padding: 20px;
+          position: relative;
+          top: 20vh;
+        }
+        
+        .view-analytics-header h1 {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        
+        .view-analytics-main {
+          width: 80vw;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+        
+        .chart-container {
+          margin-left: 30vw;
+          width: 40%;
+          flex: 2;
+          padding: 20px;
+          background-color: #333; /* Slightly lighter background for the chart area */
+          border-radius: 8px;
+          /* background-color: red; */
+        }
+        
+        .data-list {
+          flex: 1;
+          padding: 20px;
+          background-color: #444; /* Darker background for the data list */
+          border-radius: 8px;
+          margin-left: 20px;
+        }
+        
+        .data-list ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        .data-list li {
+          margin-bottom: 10px;
+        }
+        
+        .data-list strong {
+          color: #4CAF50; /* Green color for strong text */
+          color:  rgb(47,174,237);
+          /* color: rgb(81, 12, 229) ; */
+        }
+        
+        .view-analytics-footer {
+          text-align: center;
+          margin-top: 20px;
+          color:  rgb(47,174,237); /* Light gray text for footer */
+        }
+        
+        @media (max-width: 600px) {
+          .view-analytics-main {
+            flex-direction: column;
+          }
+        
+          .data-list {
+            margin-left: 0;
+            margin-top: 20px;
+          }
+        
+          .view-analytics-header h1 {
+            font-size: 18px;
+          }
+        
+          .chart-container, .data-list {
+            width: 100%;
+          }
+        }
+        
+        .load{
+          font-size: large;
+          margin: 0 auto;
+          margin-left: 50%;
+          margin-top: 50vh;
+        }

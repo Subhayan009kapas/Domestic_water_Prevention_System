@@ -1,0 +1,102 @@
+/* adminDashboard.css */
+
+
+
+/* Container for the dashboard */
+.admin-dashboard-container {
+          /* width: 50%; */
+          margin: 10vh 25%;
+          border-radius: 1rem;  
+          width: 60%;
+        
+          max-width: 1200px;
+          /* margin: 0 auto; */
+          background-color: #1e1e1e;
+          /* background-color: red; */
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          /* border-radius: 10px; */
+          /* margin-top: 30px; */
+          position: relative;
+          top: 27vh;
+        }
+        
+        /* Header styling */
+        .admin-dashboard-header {
+          background-color: #333333;
+          color: #ffffff;
+          padding: 15px 20px;
+          border-radius: 10px 10px 0 0;
+          text-align: center;
+        }
+        
+        .admin-dashboard-header h1 {
+          margin: 0;
+          font-size: 26px;
+        }
+        
+        /* Main Content */
+        .admin-dashboard-main {
+          padding: 20px;
+          margin-top: 10px;
+        }
+        
+        /* Table Styling */
+        .admin-dashboard-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        
+        .admin-dashboard-table th,
+        .admin-dashboard-table td {
+          padding: 12px 15px;
+          text-align: left;
+          border: 1px solid #333333;
+        }
+        
+        .admin-dashboard-table th {
+          background-color: #4CAF50;
+          color: white;
+        }
+        
+        .admin-dashboard-table tbody tr:nth-child(even) {
+          background-color: #2a2a2a;
+        }
+        
+        .admin-dashboard-table tbody tr:nth-child(odd) {
+          background-color: #1f1f1f;
+        }
+        
+        .admin-dashboard-table tbody tr:hover {
+          background-color: #3a3a3a;
+        }
+        
+        /* Footer styling */
+        .admin-dashboard-footer {
+          text-align: center;
+          margin-top: 20px;
+          color: #888888;
+          font-size: 14px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .admin-dashboard-container {
+            padding: 10px;
+          }
+        
+          .admin-dashboard-table th,
+          .admin-dashboard-table td {
+            padding: 8px;
+          }
+        
+          .admin-dashboard-header h1 {
+            font-size: 22px;
+          }
+        }
+        .load{
+          font-size: large;
+          /* margin: 0 auto; */
+          /* margin-left: 50%; */
+          /* margin-top: 50vh; */
+        }

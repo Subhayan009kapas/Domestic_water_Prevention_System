@@ -1,0 +1,131 @@
+/* General styling for the ServoControl component */
+.servo-control-container {
+          width: 50%;
+          /* height: 50%; */
+          margin: 10vh 30%;
+          border-radius: 1rem;
+          background-color:  #1e1e1e; 
+          /* background-color: #000000; Black background */
+          color: #fff; /* White text */
+          min-height: 50vh;
+          min-width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          position: relative;
+          top:20vh;
+        }
+        
+        /* Header styling */
+        .servo-control-header {
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        
+        .servo-control-header h1 {
+          font-size: 2.5rem;
+          color: #ff9900; /* Bright orange for the title */
+          color: rgb(8, 229, 8);
+          text-shadow: 2px 2px 5px #333;
+        }
+        
+        /* Main content styling */
+        .servo-control-main {
+          background-color: #393939; /* Dark background for the main section */
+          padding: 20px;
+          border-radius: 1rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          width: 100%;
+          max-width: 500px;
+          text-align: center;
+        }
+        
+        .servo-control-main p {
+          font-size: 1.2rem;
+          color: #00ccff; /* Light blue for the text */
+          margin: 10px 0;
+        }
+        
+        /* Footer styling */
+        .servo-control-footer {
+          margin-top: 30px;
+          text-align: center;
+        }
+        
+        .servo-control-footer p {
+          font-size: 0.9rem;
+          color: #888; /* Light gray for footer text */
+        }
+        /* Slider toggle switch styling */
+      .servo-control-toggle {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+        }
+        
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: .4s;
+          border-radius: 34px;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          border-radius: 50%;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: #4CAF50; /* Green when checked */
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #4CAF50;
+        }
+        
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+        
+        .load{
+          font-size: large;
+          margin: 0 auto;
+          margin-left: 50%;
+          margin-top: 50vh;
+        }
+        .usage-bar{
+          border-radius: .5rem;
+          padding: 1rem;
+          font-weight: 700;
+          width: 50%  ;
+          margin: 0 auto;
+          color: black;
+          font-size: 1.5rem;
+        }

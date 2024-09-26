@@ -1,0 +1,146 @@
+/* Container for the entire component */
+.waterflow-container {
+          width: 50%;
+          margin: 10vh 30%;
+          border-radius: 1rem;
+          background-color: #1e1e1e;
+          padding: 20px;
+          min-width: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+          font-family: 'Roboto', sans-serif;
+          color: #e0e0e0;
+          position: relative;
+        top: 20vh;
+      }
+      
+      /* Header styling */
+      .waterflow-header {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      
+      .waterflow-header h1 {
+          color: #f5f5f5;
+          font-size: 24px;
+          font-weight: 600;
+      }
+      
+      /* Main section styling */
+      .waterflow-main {
+          margin: 0 auto;
+          padding: 10px 0;
+          border-bottom: 1px solid #333;
+      }
+      
+      .waterflow-main:last-of-type {
+          border-bottom: none;
+      }
+      
+      .waterflow-main p {
+          color: #e0e0e0;
+          font-size: 18px;
+          margin: 5px 0;
+      }
+      
+      .waterflow-main strong {
+          color: #ffffff;
+          font-weight: 500;
+      }
+      
+      /* Flex row for penalty and regular sections */
+      .price-row {
+          display: flex;
+          justify-content: space-between;
+          gap: 2vw;
+          margin-top: 20px;
+      }
+      
+      /* Price box styling */
+      .price-row .price-box {
+          width: 48%; /* Ensures both sections fit in one row */
+          padding: 15px;
+          background-color: #333333;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          border: 1px solid #444;
+          transition: all 0.3s ease;
+      }
+      
+      /* Regular price section */
+      .price-box.regular {
+          background-color: #2e473a; /* Greenish background for regular */
+          border: 2px solid #4caf50; /* Green border */
+      }
+      
+      /* Penalty price section */
+      .price-box.penalty {
+          background-color: #472e2e; /* Reddish background for penalty */
+          border: 2px solid #d32f2f; /* Red border */
+      }
+      
+      /* Regular and Penalty Price Titles */
+      h2 {
+          font-size: 18px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+          color: #cccccc;
+      }
+      
+      /* Highlight for regular usage */
+      .usage-regular {
+          color: #4caf50;
+      }
+      
+      /* Highlight for penalty usage */
+      .usage-penalty {
+          color: #ff9800;
+      }
+      
+      /* Total price */
+      .total-price {
+          font-size: 22px;
+          color: #d32f2f;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 20px;
+      }
+      
+      /* Footer styling */
+      .waterflow-footer {
+          text-align: center;
+          margin-top: 20px;
+      }
+      
+      .waterflow-footer p {
+          color: #888;
+          font-size: 14px;
+      }
+      
+      /* Loading text styling */
+      .load {
+          text-align: center;
+          font-size: 18px;
+          color: #cccccc;
+      }
+      /* Total price styling with more emphasis */
+      .total-price {
+          font-size: 24px;
+          color: #f1c40f; /* Gold color for visibility */
+          font-weight: bold;
+          text-align: center;
+          margin-top: 30px;
+          padding: 10px;
+          background-color: #282828; /* Slightly lighter background */
+          border: 2px solid #f39c12; /* Gold border */
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(243, 156, 18, 0.5); /* Add subtle shadow for emphasis */
+          transition: transform 0.2s ease, background-color 0.3s ease; /* Animation for hover effect */
+      }
+      
+      /* Hover effect to enhance interaction */
+      .total-price:hover {
+          transform: scale(1.05); /* Slight scaling on hover */
+          background-color: #f39c12; /* Change background color on hover */
+          color: #1e1e1e; /* Switch text color for better contrast */
+      }

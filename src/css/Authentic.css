@@ -8,7 +8,7 @@
           background-color: #070404;
        }
        
-       .auth-header {
+       .auth2-header {
           display: flex;
           margin-bottom: 20px;
        }
@@ -41,7 +41,7 @@
          
        }
        .auth-card h1{
-          color: #333;
+          color: #797777;
        }
        
        .auth-input {

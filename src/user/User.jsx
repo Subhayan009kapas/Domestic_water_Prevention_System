@@ -80,15 +80,20 @@ function User() {
   return (
     <>
      {/* Header Section */}
-    <header className="header">
-        <h1 className="title"><FontAwesomeIcon icon={faUser} /> User</h1>
+    <header className="user-header">
+       
         <div className="user-profile" onClick={toggleDetails}>
-        <span>{user?.displayName}</span>
-          {user && <img src={user.photoURL} alt="User Profile" className="profile-img" />}
+        <span>{user?.email}</span>
+          {user &&  <img 
+    src={user.photoURL || 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png'}
+    alt="User Profile"
+    className="profile-img"
+    onError={(e) => { e.target.src = 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png'; }} // Fallback to default if error occurs
+  />}
          
         </div>
       </header>
-    <div className="user-container">
+  
      
       
 
@@ -104,7 +109,7 @@ function User() {
       )}
 
       {/* Form Section */}
-      <div className="form-container">
+      {/* <div className="form-container">
         <form onSubmit={handleSubmit} className="user-form">
           <label>
             Field 1:
@@ -131,8 +136,8 @@ function User() {
 
         {success && <p className="success-message">{success}</p>}
         {error && <p className="error-message">{error}</p>}
-      </div>
-    </div>
+      </div> */}
+ 
     </>
   );
 }
