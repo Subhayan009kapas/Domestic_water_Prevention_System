@@ -6,6 +6,7 @@ import {
   faPaperPlane,
   faHeartPulse,
   faHandHoldingDroplet,
+  faAddressCard
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
@@ -70,7 +71,7 @@ function Home() {
             style={{ fontSize: "2.5rem" }}
             className="heading-text"
           >
-            About us
+           <img src="https://i.ibb.co/0F49Dwp/resume.png" alt="resume" border="0" height={"50px"} style={{position:"relative" , top:"5px"}}/> About us 
           </h1>
         </div>
 
@@ -105,7 +106,7 @@ function Home() {
             style={{ fontSize: "2.5rem" }}
             className="heading-text"
           >
-            Our Vision
+            Our Vision <img src="https://i.ibb.co/D16QSfj/vision-setting.png"alt="vision-setting" border="0" height={"60px"}></img>
           </h1>
         </div>
 
@@ -137,7 +138,7 @@ function Home() {
             style={{ fontSize: "2.5rem" }}
             className="heading-text"
           >
-            Blogs
+            Blogs <img src="https://i.ibb.co/pj8xRDV/blogging-feed.png" alt="blogging-feed" border="0" height={"50px"}></img>
           </h1>
         </div>
 
@@ -209,7 +210,7 @@ function Home() {
             style={{ fontSize: "2.5rem" }}
             className="heading-text"
           >
-            Contact Us
+            <img src="https://i.ibb.co/pK63FJN/contact-us-3.png" alt="contact-us-3" border="0" height={"50px"}/>Contact Us
           </h1>
         </div>
 
