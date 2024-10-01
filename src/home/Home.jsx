@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/home.css";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFaucetDrip,
@@ -11,6 +12,26 @@ import {
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 function Home() {
+  const [activetab , setActivetab]=useState(null)
+  const navactive=(index)=>{
+    setActivetab(index)
+  }
+  const tabStyle = {
+    padding: "10px 20px",
+    borderRadius: "5px",
+    cursor: "pointer",
+    transition: "color 0.3s", // Smooth transition for color change
+    color: "#333", // Default text color
+  };
+
+  // Active style for the active tab
+  const activeStyle = {
+    color: "transparent", // Make the actual text color transparent
+    background: "linear-gradient(to right, #510ce5, #2faeed)", // Gradient for text
+    WebkitBackgroundClip: "text", // For WebKit-based browsers
+    backgroundClip: "text", // Standard syntax
+    fontWeight: "bold", // Optional: Make it bold
+  };
   return (
     <>
       <div className="hero" id="home">
@@ -25,21 +46,21 @@ function Home() {
               </h1>
             </div>
             <div className="nav">
-              <ul>
-                <li>
-                  <Link to="home">Home</Link>
+              <ul >
+                <li  style={activetab === 0 ? { ...tabStyle, ...activeStyle } : tabStyle }>
+                  <Link to="home" onClick={()=>navactive(0)} >Home</Link>
                 </li>
-                <li>
-                  <Link to="about">About Us</Link>
+                <li   style={activetab === 1 ? { ...tabStyle, ...activeStyle } : tabStyle }>
+                  <Link to="about" onClick={()=>navactive(1)} >About Us</Link>
                 </li>
-                <li>
-                  <Link to="vision">Vision</Link>
+                <li  style={activetab === 2 ? { ...tabStyle, ...activeStyle } : tabStyle}>
+                  <Link to="vision"  onClick={()=>navactive(2)}>Vision</Link>
                 </li>
-                <li>
-                  <Link to="blogs">Blogs</Link>
+                <li  style={activetab === 3 ? { ...tabStyle, ...activeStyle } : tabStyle}>
+                  <Link to="blogs"  onClick={()=>navactive(3)}>Blogs</Link>
                 </li>
-                <li>
-                  <Link to="contact">Contact us</Link>
+                <li style={activetab === 4 ? { ...tabStyle, ...activeStyle } : tabStyle } >
+                  <Link to="contact" onClick={()=>navactive(4)}  >Contact us</Link>
                 </li>
                 <li className="login">
                   <NavLink to="/authentication">
@@ -50,7 +71,7 @@ function Home() {
               </ul>
             </div>
           </div>
-          <div className="hero-text">
+          {/* <div className="hero-text">
             <h1 id="first-line">
               Save Water <FontAwesomeIcon icon={faFaucetDrip} />{" "}
             </h1>
@@ -58,7 +79,30 @@ function Home() {
             <h1 id="second-line">
               Save Life <FontAwesomeIcon icon={faHeartPulse} />{" "}
             </h1>
-          </div>
+          </div> */}
+
+<motion.div
+      className="hero-text"
+      initial={{ x: "-100vw" }}  // Start off-screen to the left
+      animate={{ x: 0 }}         // Animate to its original position
+      transition={{ type: "spring", stiffness: 100, delay: 0.2 }} // Add a spring effect with some delay
+    >
+      <h1 id="first-line">
+        Save Water <FontAwesomeIcon icon={faFaucetDrip}  />{" "}
+      </h1>
+      <br></br>
+      <h1 id="second-line">
+        Save Life <FontAwesomeIcon icon={faHeartPulse} beat/>{" "}
+      </h1>
+      <div className="get_service">
+      <NavLink to="/authentication">
+                    {" "}
+                    <button>Get OurService</button>
+                  </NavLink>
+      </div>
+      
+     
+    </motion.div>
         </div>
       </div>
 
