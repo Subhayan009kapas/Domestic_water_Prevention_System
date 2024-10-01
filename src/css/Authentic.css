@@ -1,97 +1,96 @@
 /* Authentic.css */
 .auth-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #070404;
-       }
-       
-       .auth2-header {
-          display: flex;
-          margin-bottom: 20px;
-       }
-       
-       .role-button {
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          background-color: #e0e0e0;
-          color: #333;
-          cursor: pointer;
-          margin: 0 5px;
-          transition: background-color 0.3s;
-       }
-       
-       .role-button.active {
-          background-color: #007bff;
-          color: #fff;
-       }
-       
-       .auth-card {
-          background-color: rgb(21, 20, 20);
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          width: 320px;
-          text-align: center;
-          color: white;
-          border: .1px solid white;
-         
-       }
-       .auth-card h1{
-          color: #797777;
-       }
-       
-       .auth-input {
-          width: 90%;
-          padding: 15px;
-          margin: 10px 0;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          color: #070404;
-          font-size: 1rem;
-       }
-       
-       .auth-button {
-          width: 100%;
-          padding: 15px;
-          border: none;
-          border-radius: 4px;
-          background-color: #007bff;
-          color: #fff;
-          cursor: pointer;
-          margin: 10px 0;
-          font-weight: bold;
-          font-size: 1rem;
-       }
-       
-       .auth-button:hover {
-          background-color: #0056b3;
-       }
-       
-       .google-button {
-          width: 100%;
-          padding: 15px;
-          border: none;
-          border-radius: 4px;
-          background-color: #db4437;
-          color: #fff;
-          cursor: pointer;
-          margin: 10px 0;
-          font-size: 1rem;
-       }
-       
-       .google-button:hover {
-          background-color: #c1351d;
-       }
-       
-       .toggle-button {
-          border: none;
-          background: none;
-          color: #007bff;
-          cursor: pointer;
-          font-weight: bold;
-       }
-      
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #070404;
+}
+
+.authentic-header {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.role-button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   background-color: #e0e0e0;
+   color: #333;
+   cursor: pointer;
+   margin: 0 5px;
+   transition: background-color 0.3s;
+}
+
+.role-button.active {
+   background-color: #007bff;
+   color: #fff;
+}
+
+.auth-card {
+   background-color: rgb(21, 20, 20);
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 320px;
+   text-align: center;
+   color: white;
+   border: .1px solid white;
+}
+
+.auth-card h1 {
+   color: #797777;
+}
+
+.auth-input {
+   width: 90%;
+   padding: 15px;
+   margin: 10px 0;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   color: #070404;
+   font-size: 1rem;
+}
+
+.auth-button {
+   width: 100%;
+   padding: 15px;
+   border: none;
+   border-radius: 4px;
+   background-color: #007bff;
+   color: #fff;
+   cursor: pointer;
+   margin: 10px 0;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.auth-button:hover {
+   background-color: #0056b3;
+}
+
+.google-button {
+   width: 100%;
+   padding: 15px;
+   border: none;
+   border-radius: 4px;
+   background-color: #db4437;
+   color: #fff;
+   cursor: pointer;
+   margin: 10px 0;
+   font-size: 1rem;
+}
+
+.google-button:hover {
+   background-color: #c1351d;
+}
+
+.toggle-button {
+   border: none;
+   background: none;
+   color: #007bff;
+   cursor: pointer;
+   font-weight: bold;
+}

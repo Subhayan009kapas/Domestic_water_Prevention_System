@@ -1,21 +1,19 @@
-// export default ServoControl;
-
 import React, { useState, useEffect } from 'react';
-import { db } from '../firebase';  // Adjust the path as necessary
+import { db } from '../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
-import '../css/servoControl.css';  // Import your CSS for user page styling
+import '../css/servoControl.css';
 
 const ServoControl = ({ userId = "defaultUserId" }) => {
   const [servoState, setServoState] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [totalUsage, setTotalUsage] = useState(0); // Track total water usage
-  const [maxLimit, setMaxLimit] = useState(200); // Assuming default max limit
+  const [totalUsage, setTotalUsage] = useState(0);
+  const [maxLimit, setMaxLimit] = useState(200);
   const [penaltyLimit, setPenaltyLimit] = useState(150);
   const [regularLimit, setRegularLimit] = useState(100);
 
   const servoControlDocRef = userId ? doc(db, 'users', userId, 'currentMonth', 'servoControl') : null;
   const waterFlowDocRef = userId ? doc(db, 'users', userId, 'currentMonth', 'waterflowSensor') : null;
-  const limitDocRef = doc(db, 'admin', 'limit'); // Assuming limit is stored in admin collection
+  const limitDocRef = doc(db, 'admin', 'limit');
 
   useEffect(() => {
     if (!userId) {
@@ -27,12 +25,13 @@ const ServoControl = ({ userId = "defaultUserId" }) => {
       try {
         const docSnap = await getDoc(servoControlDocRef);
         if (docSnap.exists()) {
+          console.log("Servo document data: ", docSnap.data());
           setServoState(docSnap.data().servoState);
         } else {
-          console.log("No such document!");
+          console.log("No such servo control document!");
         }
       } catch (error) {
-        console.error("Error fetching document: ", error);
+        console.error("Error fetching servo document: ", error);
       }
     };
 
@@ -40,12 +39,13 @@ const ServoControl = ({ userId = "defaultUserId" }) => {
       try {
         const docSnap = await getDoc(waterFlowDocRef);
         if (docSnap.exists()) {
-          setTotalUsage(docSnap.data().totalusages || 0); // Assuming total usage is stored here
+          console.log("Waterflow document data: ", docSnap.data());
+          setTotalUsage(docSnap.data().totalusages || 0);
         } else {
-          console.log("No such document!");
+          console.log("No such waterflow document!");
         }
       } catch (error) {
-        console.error("Error fetching document: ", error);
+        console.error("Error fetching waterflow document: ", error);
       }
     };
 
@@ -53,12 +53,13 @@ const ServoControl = ({ userId = "defaultUserId" }) => {
       try {
         const docSnap = await getDoc(limitDocRef);
         if (docSnap.exists()) {
+          console.log("Limits document data: ", docSnap.data());
           const data = docSnap.data();
           setMaxLimit(data.max || 200);
           setPenaltyLimit(data.penalty || 150);
           setRegularLimit(data.regular || 100);
         } else {
-          console.log("No such document!");
+          console.log("No such limits document!");
         }
       } catch (error) {
         console.error("Error fetching limits: ", error);
@@ -77,11 +78,10 @@ const ServoControl = ({ userId = "defaultUserId" }) => {
       await setDoc(servoControlDocRef, { servoState: newState });
       setServoState(newState);
     } catch (error) {
-      console.error("Error updating document: ", error);
+      console.error("Error updating servo document: ", error);
     }
   };
 
-  // Determine the bar color based on the total usage
   const getBarColor = () => {
     if (totalUsage < regularLimit) return '#90EE90';
     if (totalUsage >= regularLimit && totalUsage < maxLimit) return '#ffa756';
@@ -105,13 +105,12 @@ const ServoControl = ({ userId = "defaultUserId" }) => {
               type="checkbox"
               checked={servoState}
               onChange={handleToggle}
-              disabled={totalUsage >= maxLimit} // Disable switch if usage exceeds the max limit
+              disabled={totalUsage >= maxLimit} // Disable switch if usage exceeds max limit
             />
             <span className="slider"></span>
           </label>
         </div>
 
-        {/* Progress Bar */}
         <div className="usage-bar" style={{ backgroundColor: getBarColor() }}>
           Usage: {totalUsage} liters
         </div>
