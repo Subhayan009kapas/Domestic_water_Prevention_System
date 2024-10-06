@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Listen on all addresses, including your IP
     port: 3000 // Or any other port
-  }
+  },
+  base: '/Domestic_water_Prevention_System/'
 })
