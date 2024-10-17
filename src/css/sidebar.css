@@ -1,7 +1,9 @@
 .sidenav {
   position: fixed;
+  max-width: 16rem;
   top: 0;
   left: 10px;
+  z-index: 100;
   margin-top: 2.5vh;
   min-height: 95vh;
   width: 20vw;
@@ -12,7 +14,15 @@
   flex-direction: column;
   align-items: center; /* Center items horizontally */
 }
-
+.sidenav h1{
+  font-size: 1.7rem;
+}
+.sidenavimg{
+  background-color:rgb(50, 148, 253);
+  /* font-size: 2rem; */
+  border-radius: 50%;
+  height:8rem;
+}
 .nav-item {
   width: 80%;
   margin: 2vh 0; /* Adds vertical spacing between items */
@@ -20,7 +30,7 @@
 }
 
 .nav-link {
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1rem; /* Increased font size */
   font-weight: bold; /* Bold text */
   color: white;
   text-decoration: none; /* Remove underline */
@@ -29,22 +39,112 @@
   transition: .3s all;
   display: block; /* Makes the link fill its container */
   background-color:#412474 ;
+  display: flex;
+  justify-content: center;
+
 }
 
+.innerNavbar{
+  width: 70%; 
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.innerNavbar svg{
+  width: 24px; /* Desired width */
+    height: 24px; /* Desired height */
+    margin-right: 8px; /* Space between the SVG and text */
+}
+.userIinnerNavbar{
+  width: 75%; 
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.nav-link svg{
+  /* background-color: red  ; */
+  width: 1.8rem;
+}
 .nav-link:hover {
   background-color: #8448ed; /* Background color on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
-.user-image-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0; /* Space around the user image */
+.last-of-admin{
+  position: absolute;
+  width: 75%;
+  bottom: 5rem;
+  background-color: #b92910;
+  &:hover{
+    background-color: #911f0b;
+  }
 }
 
-.user-profile-img {
-  width: 100px; /* Adjust width as needed */
-  height: 100px; /* Adjust height as needed */
-  border-radius: 50%; /* Circular image */
-  object-fit: cover; /* Ensure the image covers the area */
-  border: 2px solid white; /* Optional: border for the image */
+.expand-sidenavabr{
+  /* background-color: #4ec0f5; */
+  position: absolute  ;
+  left: 0rem;
+  bottom: 1rem;
+  z-index: 101;
+  display: none;
+  /* left: 10%; */
+  background-color: transparent;
+  &:hover{
+    background-color: transparent;
+  }
+}
+.expand-sidenavabr svg{
+  background-color: transparent;
+  color: transparent;
+  width: 2rem;
+  height: 2rem;
+}
+.sidebar-close-button{
+  /* background-color: #4ec0f5; */
+  transform: translate(15rem);
+}
+.space-for-sidenav-h1{
+  position: absolute;
+  top: 5rem;
+  left: 0rem;
+  height: 2rem;
+  width: 5rem;
+  text-align: center;
+  /* background-color: rebeccapurple; */
+}
+@media (max-width: 768px) {
+  .expand-sidenavabr{
+    /* display: block; */
+    width: 5rem;
+    
+  }
+  .sidebar-open-button{
+    /* background-color: red; */
+    position: relative;
+    bottom: 2rem;
+  }
+  .sidebar-close-button{
+    position: relative;
+    bottom: 2rem; 
+  }
+  .sidenav{
+    width: 20%;
+    max-width: 20rem;
+
+  }
+
+
+
+
+  .space-for-sidenav-h1{
+    height: 2rem;
+    /* width: 2rem; */
+    text-align: center;
+    /* background-color: rebeccapurple; */
+  }
+}
+@media (max-width: 950px) {
+  .expand-sidenavabr{
+    width: 5rem;
+    display: block;
+  }
 }
